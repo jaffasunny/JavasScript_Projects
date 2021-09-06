@@ -99,11 +99,16 @@ body {
 .product{
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	width: 100%;
 	border-bottom: 5px solid gainsboro;
 }
 .product-title{
 	width: 30%;
+}
+.product-title img{
+	width: 150px;
+	height: 150px;
 }
 .price{
 	width: 20%;

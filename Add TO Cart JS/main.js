@@ -96,7 +96,7 @@ function displayCart() {
             <div class="product">
 				<h5 class="product-title">
 					<i onclick="return this.parentNode.parentNode.remove();" class="bi bi-x-circle-fill mr-3"></i>
-					<img class="mr-3" src="./images/${item.name}.jpg">
+					<img class="mr-3" src="./images/${item.name}.jpeg">
 					<span>${item.name}</span>
 				</h5>
 				<div class="price">$${item.price},00</div>
