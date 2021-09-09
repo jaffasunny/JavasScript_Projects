@@ -14,7 +14,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 70%;
+	min-width: 70%;
+	max-width: 100%;
 }
 
 #todo-item {
@@ -29,8 +30,9 @@ body {
 #deleteButtonAll {
 	padding: 10px;
 	border-radius: 12px;
-	width: 10%;
-    margin-right: 5px;
+	min-width: 10%;
+    max-width: auto;
+	margin-right: 5px;
 }
 
 .todos {
