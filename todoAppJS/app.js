@@ -14,6 +14,14 @@ function addTodo() {
 		delBtn.appendChild(delText);
 		li.appendChild(delBtn);
 
+		var editBtn = document.createElement('button');
+		var editText = document.createTextNode('EDIT');
+		editBtn.setAttribute('class','btn');
+		editBtn.className += ' ml-1';
+		editBtn.setAttribute('onclick','editItem(this)');
+		editBtn.appendChild(editText);
+		li.appendChild(editBtn);
+
 		ul.appendChild(li);
 
 		todo_item.value = "";
@@ -26,4 +34,10 @@ function deleteItem(btn){
 
 function deleteAll(){
 	ul.innerHTML = '';
+}
+
+function editItem(btn){
+	var prompt_val = btn.parentNode.firstChild.nodeValue;
+	var editValue = prompt("Enter the edit value", prompt_val);
+	btn.parentNode.firstChild.nodeValue = editValue;
 }
