@@ -23,3 +23,7 @@ function addTodo() {
 function deleteItem(btn){
 	btn.parentNode.remove();
 }
+
+function deleteAll(){
+	ul.innerHTML = '';
+}

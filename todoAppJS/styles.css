@@ -1,59 +1,64 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: azure;
-    min-height: 100vh;
-    max-height: auto;
-    border: 10px solid slategrey;
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: azure;
+	min-height: 100vh;
+	max-height: auto;
+	border: 10px solid slategrey;
 }
 
-.userInput{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
+.userInput {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
 }
 
-#todo-item{
-    width: 30%;
-    border: 1px solid gainsboro;
-    padding: 10px;
-    border-radius: 12px;
-    margin-right: 10px;
+#todo-item {
+	width: 30%;
+	border: 1px solid gainsboro;
+	padding: 10px;
+	border-radius: 12px;
+	margin-right: 10px;
 }
 
-#addButton{
-    padding: 10px;
-    border-radius: 12px;
-    width: 10%;
+#addButton,
+#deleteButtonAll {
+	padding: 10px;
+	border-radius: 12px;
+	width: 10%;
+    margin-right: 5px;
 }
 
-.todos{
-    width: 50%;
-    background-color: rgb(235, 235, 235);
-    border: 1px solid rgb(189, 184, 184);
-    border-radius: 15px;
-    min-height: 40vh;
-    max-height: auto;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 30px;
+.todos {
+	width: 50%;
+	background-color: rgb(235, 235, 235);
+	border: 1px solid rgb(189, 184, 184);
+	border-radius: 15px;
+	min-height: 40vh;
+	max-height: auto;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 30px;
 }
 
-#added-todos{
-    font-size: larger;
-    text-align: left;
+#added-todos {
+	font-size: larger;
+	text-align: left;
 }
 
-.btn{
-    border: none;
-    border-radius: 12px;
-    color: white;
-    background-color: gray;
+#added-todos li {
+	margin-top: 5px;
+}
+#added-todos .btn {
+	border: none;
+	border-radius: 12px;
+	color: white;
+	background-color: gray;
 }
