@@ -30,17 +30,16 @@ function addTodo() {
 
 	// console.log(todos);
 	if (todo_input.value !== "") {
-		let todoInput_value = todo_input.value;
-		console.log(todoInput_value);
 		let todo = `
 		<li>
-			${todoInput_value}
+			${todo_input.value}
 			<button class='btn' onclick=deleteItem(this)>Delete</button>
 			<button class='btn' onclick=deleteItem(this)>Edit</button>
 
 		</li>
 		`;
 		ul.innerHTML += todo;
+		todo_input.value = "";
 	}
 }
 
