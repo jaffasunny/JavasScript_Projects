@@ -28,14 +28,13 @@ function addTodo() {
 	let todo_input = document.getElementById("todo-item");
 	let ul = document.getElementById("added-todos");
 
-	// console.log(todos);
+	// console.log(todo_input.value);
 	if (todo_input.value !== "") {
 		let todo = `
 		<li>
-			${todo_input.value}
+			<strong>${todo_input.value}</strong>
 			<button class='btn' onclick=deleteItem(this)>Delete</button>
 			<button class='btn' onclick=deleteItem(this)>Edit</button>
-
 		</li>
 		`;
 		ul.innerHTML += todo;
