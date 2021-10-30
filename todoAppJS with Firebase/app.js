@@ -1,29 +1,7 @@
 var ul = document.getElementById("added-todos");
 
-function addTodo() {
-	// Old es5 syntax
-	// var todo_item = document.getElementById("todo-item");
-	// if (todo_item.value !== "") {
-	// 	var li = document.createElement("li");
-	// 	var li_text = document.createTextNode(todo_item.value);
-	// 	li.appendChild(li_text);
-	// 	var delBtn = document.createElement('button');
-	// 	var delText = document.createTextNode('DELETE');
-	// 	delBtn.setAttribute('class','btn');
-	// 	delBtn.setAttribute('onclick','deleteItem(this)');
-	// 	delBtn.appendChild(delText);
-	// 	li.appendChild(delBtn);
-	// 	var editBtn = document.createElement('button');
-	// 	var editText = document.createTextNode('EDIT');
-	// 	editBtn.setAttribute('class','btn');
-	// 	editBtn.className += ' ml-1';
-	// 	editBtn.setAttribute('onclick','editItem(this)');
-	// 	editBtn.appendChild(editText);
-	// 	li.appendChild(editBtn);
-	// 	ul.appendChild(li);
-	// 	todo_item.value = "";
-	// }
-
+function addItem(event) {
+	event.preventDefault();
 	// New es6 syntax
 	let todo_input = document.getElementById("todo-item");
 	let ul = document.getElementById("added-todos");
