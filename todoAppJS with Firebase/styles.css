@@ -1,66 +1,57 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 1.2rem;
+	background-color: hsl(235, 21%, 11%);
+}
+
+.background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 350px;
+	z-index: -1;
+}
+
+.background-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: left;
+}
+
+.main {
+	margin-top: 5rem;
+}
+
+.header {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	text-align: center;
-	background-color: azure;
-	min-height: 100vh;
-	max-height: auto;
-	border: 10px solid slategrey;
 }
 
-.userInput {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-width: 70%;
-	max-width: 100%;
-}
-
-#todo-item {
-	width: 30%;
-	border: 1px solid gainsboro;
-	padding: 10px;
-	border-radius: 12px;
-	margin-right: 10px;
-}
-
-#addButton,
-#deleteButtonAll {
-	padding: 10px;
-	border-radius: 12px;
-	min-width: 10%;
-    max-width: auto;
-	margin-right: 5px;
-}
-
-.todos {
-	width: 50%;
-	background-color: rgb(235, 235, 235);
-	border: 1px solid rgb(189, 184, 184);
-	border-radius: 15px;
-	min-height: 40vh;
-	max-height: auto;
-	margin-top: 30px;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	/* padding: 30px; */
-}
-
-#added-todos {
-	font-size: larger;
-	text-align: left;
-}
-
-#added-todos li {
-	margin-top: 5px;
-}
-#added-todos .btn {
-	border: none;
-	border-radius: 12px;
+.title {
 	color: white;
-	background-color: gray;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	font-size: 2em;
+}
+
+.new-todo {
+	background-color: hsl(235, 24%, 19%);
+	height: 70px;
+	border-radius: 6px;
+	margin-top: 3.5rem;
+	display: flex;
+}
+
+.check {
+	background-color: yellow;
+	width: 70px;
 }
