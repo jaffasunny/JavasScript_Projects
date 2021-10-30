@@ -52,6 +52,44 @@ body {
 }
 
 .check {
-	background-color: yellow;
 	width: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.check .check-mark {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 2px solid hsl(233, 14%, 26%);
+}
+
+.todo-input {
+	/* Flex grow stretches the element as much as it can */
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+}
+
+.todo-input input {
+	width: 100%;
+}
+
+.todo-input form {
+	flex-grow: 1;
+}
+
+.todo-input input {
+	width: 100%;
+	padding: 0.625rem 0px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: hsl(234, 39%, 85%);
+	font-size: 1.1em;
+}
+
+.todo-input input::placeholder {
+	color: hsl(233, 14%, 35%);
 }
