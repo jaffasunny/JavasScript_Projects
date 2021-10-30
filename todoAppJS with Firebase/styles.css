@@ -64,10 +64,13 @@ body {
 	border-radius: 50%;
 	border: 2px solid hsl(233, 14%, 26%);
 	transition: all 0.25s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .check-mark:hover {
-	background: linear-gradient(135deg, #55ddff 0%, #C058f3 100%);
+	background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
 }
 
 .todo-input {
@@ -97,4 +100,23 @@ body {
 
 .todo-input input::placeholder {
 	color: hsl(233, 14%, 35%);
+}
+
+.todo-text {
+	display: flex;
+	align-items: center;
+}
+
+.todo-item {
+	width: 100%;
+	display: flex;
+	height: 70px;
+	border-bottom: 1px solid hsl(237, 14%, 26%);
+	font-size: 1.1em;
+	color: white;
+}
+
+.todo-items-wrapper {
+	margin-top: 30px;
+	background-color: hsl(235, 24%, 19%);
 }
