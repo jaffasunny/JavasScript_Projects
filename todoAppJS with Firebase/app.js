@@ -2,22 +2,28 @@ var ul = document.getElementById("added-todos");
 
 function addItem(event) {
 	event.preventDefault();
+	let text = document.getElementById("todo-input");
+	db.collection("todo-items").add({
+		text: text.value,
+		status: "active",
+	});
+	text.value = "";
 	// New es6 syntax
-	let todo_input = document.getElementById("todo-item");
-	let ul = document.getElementById("added-todos");
+	// let todo_input = document.getElementById("todo-item");
+	// let ul = document.getElementById("added-todos");
 
-	// console.log(todo_input.value);
-	if (todo_input.value !== "") {
-		let todo = `
-		<li>
-			<strong>${todo_input.value}</strong>
-			<button class='btn' onclick=deleteItem(this)>Delete</button>
-			<button class='btn' onclick=deleteItem(this)>Edit</button>
-		</li>
-		`;
-		ul.innerHTML += todo;
-		todo_input.value = "";
-	}
+	// // console.log(todo_input.value);
+	// if (todo_input.value !== "") {
+	// 	let todo = `
+	// 	<li>
+	// 		<strong>${todo_input.value}</strong>
+	// 		<button class='btn' onclick=deleteItem(this)>Delete</button>
+	// 		<button class='btn' onclick=deleteItem(this)>Edit</button>
+	// 	</li>
+	// 	`;
+	// 	ul.innerHTML += todo;
+	// 	todo_input.value = "";
+	// }
 }
 
 function deleteItem(btn) {
