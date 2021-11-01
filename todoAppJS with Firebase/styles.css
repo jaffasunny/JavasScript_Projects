@@ -69,10 +69,23 @@ body {
 	justify-content: center;
 }
 
-.check-mark:hover {
-	background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+.check-mark img {
+	visibility: hidden;
 }
 
+.check-mark:hover,
+.check-mark.checked {
+	background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+}
+.check-mark:hover img,
+.check-mark.checked img {
+	visibility: visible;
+}
+
+.todo-text.checked {
+	text-decoration: line-through;
+	color: hsl(233, 14%, 35%);
+}
 .todo-input {
 	/* Flex grow stretches the element as much as it can */
 	flex-grow: 1;

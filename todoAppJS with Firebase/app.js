@@ -45,11 +45,11 @@ function generateItems(items) {
 		itemsHtml += `
 			<div class="todo-item">
                 <div class="check">
-                    <div data-id="${item.id}" class="check-mark" ${item.status == "completed" ? "checked": ""}>
+                    <div data-id="${item.id}" class="check-mark ${item.status == "completed" ? "checked" : ""}">
                         <img src="./assets/icon-check.svg" alt="">
                     </div>
                 </div>
-                <div class="todo-text ${item.status == "completed" ? "checked": ""}">
+                <div class="todo-text ${item.status == "completed" ? "checked" : ""}">
                     ${item.text}
                 </div>
             </div>
