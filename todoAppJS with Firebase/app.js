@@ -8,22 +8,6 @@ function addItem(event) {
 		status: "active",
 	});
 	text.value = "";
-	// New es6 syntax
-	// let todo_input = document.getElementById("todo-item");
-	// let ul = document.getElementById("added-todos");
-
-	// // console.log(todo_input.value);
-	// if (todo_input.value !== "") {
-	// 	let todo = `
-	// 	<li>
-	// 		<strong>${todo_input.value}</strong>
-	// 		<button class='btn' onclick=deleteItem(this)>Delete</button>
-	// 		<button class='btn' onclick=deleteItem(this)>Edit</button>
-	// 	</li>
-	// 	`;
-	// 	ul.innerHTML += todo;
-	// 	todo_input.value = "";
-	// }
 }
 
 function getItems() {
@@ -45,11 +29,15 @@ function generateItems(items) {
 		itemsHtml += `
 			<div class="todo-item">
                 <div class="check">
-                    <div data-id="${item.id}" class="check-mark ${item.status == "completed" ? "checked" : ""}">
+                    <div data-id="${item.id}" class="check-mark ${
+			item.status == "completed" ? "checked" : ""
+		}">
                         <img src="./assets/icon-check.svg" alt="">
                     </div>
                 </div>
-                <div class="todo-text ${item.status == "completed" ? "checked" : ""}">
+                <div class="todo-text ${
+									item.status == "completed" ? "checked" : ""
+								}">
                     ${item.text}
                 </div>
             </div>
@@ -63,11 +51,13 @@ getItems();
 
 function createEventListeners() {
 	let todoCheckMarks = document.querySelectorAll(".todo-item .check-mark");
+	let items_status = document.querySelectorAll(".items-statuses");
 	todoCheckMarks.forEach((checkMark) => {
 		checkMark.addEventListener("click", function () {
 			markCompleted(checkMark.dataset.id);
 		});
 	});
+	console.log(items_status);
 }
 
 function markCompleted(id) {
